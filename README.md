@@ -17,15 +17,55 @@ To write a program to perform linear search and binary search using python progr
 5.	Else, compare x with the middle element of the elements on the left side of mid. This is done by setting high to high = mid - 1.
 6.	Repeat steps 2 to 5 until low meets high
 ## Program:
+DEVELOPED BY: EZHIL NEVEDHA.K
+
+REGISTER NUMBER:212223230055
+
 i)	#Use a linear search method to match the item in a list.
 ```
-
+def linearSearch(array, k, low, high):
+    while low<=high:
+        mid=low+(high-low)//2
+        if array[mid]==k:
+            return mid
+        elif array[mid]<k:
+            low=mid+1
+        else:
+            high=mid-1
+    return -1
+array = eval(input())
+array.sort()
+k = eval(input()) 
+print(array)
+res=linearSearch(array,k,0,len(array)-1)
+if res==-1:
+    print("Element not found")
+else:
+    print("Element found at index: ",res)
 
 
 ```
 ii)	# Find the element in a list using Binary Search(Iterative Method).
 ```
-
+def binarySearchIter(array, k, low, high):
+    while low<=high:
+        mid=low+(high-low)//2
+        if array[mid]==k:
+            return mid
+        elif array[mid]<k:
+            low=mid+1
+        else:
+            high=mid-1
+    return -1
+array = eval(input())
+array.sort()
+k = eval(input()) 
+print(array)
+res=binarySearchIter(array,k,0,len(array)-1)
+if res==-1:
+    print("Element not found")
+else:
+    print("Element found at index: ",res)
 
 
 
@@ -33,16 +73,39 @@ ii)	# Find the element in a list using Binary Search(Iterative Method).
 ```
 iii)	# Find the element in a list using Binary Search (recursive Method).
 ```
-
+def binarySearchrec(array, k, low, high):
+    while low<=high:
+        mid=low+(high-low)//2
+        if array[mid]==k:
+            return mid
+        elif array[mid]<k:
+            low=mid+1
+        else:
+            high=mid-1
+    return -1
+array = eval(input())
+array.sort()
+k = eval(input()) 
+print(array)
+res=binarySearchrec(array,k,0,len(array)-1)
+if res==-1:
+    print("Element not found")
+else:
+    print("Element found at index: ",res)
 
 
 
 
 ```
-## Sample Input and Output
+## Sample Input and Output:
+i)	#Use a linear search method to match the item in a list.
+![image](https://github.com/ezhilnevedha/Search-Algorithms/assets/140057992/624ae4fb-58e2-4207-a094-bb2aac23f9ec)
 
+ii)	# Find the element in a list using Binary Search(Iterative Method).
+![image](https://github.com/ezhilnevedha/Search-Algorithms/assets/140057992/a3353ef2-edbf-4805-9496-5de5bf4393e2)
 
-
+iii)	# Find the element in a list using Binary Search (recursive Method).
+![image](https://github.com/ezhilnevedha/Search-Algorithms/assets/140057992/7218e89f-69de-41bf-8f72-5411c42473cf)
 
 
 
